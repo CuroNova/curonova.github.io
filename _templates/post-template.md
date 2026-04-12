@@ -1,43 +1,20 @@
-<% tp.file.rename(tp.date.now("YYYY-MM-DD_HH-mm-ss")) %>
-
 ---
-title: ""
-date: <% tp.date.now("YYYY-MM-DD HH:mm:ss") %> +0900
-categories: [없음]
-tags: [없음]
-icon: 📁
-
+title: 없음
+date: 2026-04-12 22:00:00 +0900
+categories: 없음
+tags:
+toc: false
+description:
+comments: false
 ---
+# 대제목
 
-# {{title}}
+## 소제목
 
-## 📌 개요
-간단한 설명을 작성합니다.
-
----
+내용 입력
 
 ## 📥 다운로드
 
 <!-- [파일 다운로드](/assets/files/파일이름) -->
 
 ---
-
-## 📝 기능
-
-- 기능 1
-- 기능 2
-- 기능 3
-
----
-
-## 📌 사용 방법
-
-1. 단계 1
-2. 단계 2
-3. 단계 3
-
----
-
-## 💡 참고
-
-추가 설명이나 주의사항을 작성합니다.
