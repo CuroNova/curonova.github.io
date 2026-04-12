@@ -1,5 +1,13 @@
 # Obsidian
 .obsidian/
+.obsidian/workspace.json
+.obsidian/cache/
+
+# Private notes
+draft/
+private/
+notes/
+daily/
 
 # Bundler cache
 .bundle
@@ -9,7 +17,8 @@ Gemfile.lock
 # Jekyll cache
 .jekyll-cache
 .jekyll-metadata
-_site
+_site/
+_site/*
 
 # RubyGems
 *.gem
@@ -25,6 +34,18 @@ package-lock.json
 !.vscode/extensions.json
 !.vscode/tasks.json
 
+# OS files
+.DS_Store
+Thumbs.db
+
+# Env / secrets
+.env
+*.env
+config.local.*
+secrets.*
+
 # Misc
 _sass/vendors
 assets/js/dist
+.sass-cache
+.tmp/
