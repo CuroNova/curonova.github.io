@@ -13,9 +13,8 @@ tags:
 toc: false
 description:
 comments: false
-pin: true
+pin: false
 ---
-
 # 대제목
 
 ## 소제목
