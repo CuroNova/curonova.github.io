@@ -1,8 +1,8 @@
 ---
-title: "첫 포스트"
+title: 첫 포스트
 date: 2026-04-12 14:00:00 +0900
-categories: [blog]
-tags: [start]
+categories: Test
+tags:
 ---
 
 # 첫 글

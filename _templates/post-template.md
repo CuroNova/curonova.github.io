@@ -1,6 +1,8 @@
+<% tp.file.rename(tp.date.now("YYYY-MM-DD_HH-mm-ss")) %>
+
 ---
 title: ""
-date: {{date}} {{time}} +0900
+date: <% tp.date.now("YYYY-MM-DD HH:mm:ss") %> +0900
 categories: []
 tags: []
 ---
@@ -14,7 +16,7 @@ tags: []
 
 ## 📥 다운로드
 
-[파일 다운로드](/assets/files/파일이름)
+<!-- [파일 다운로드](/assets/files/파일이름) -->
 
 ---
 
