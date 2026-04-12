@@ -10,6 +10,7 @@ title: "<% inputTitle %>"
 date: <% datetime %>
 categories: 없음
 tags:
+toc: false
 description:
 comments: false
 pin: false
