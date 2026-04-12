@@ -1,0 +1,10 @@
+{
+  "newFileLocation": "folder",
+  "attachmentFolderPath": "assets/img",
+  "newLinkFormat": "relative",
+  "newFileFolderPath": "_posts",
+  "trashOption": "none",
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "showLineNumber": true
+}
