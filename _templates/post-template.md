@@ -1,12 +1,21 @@
+<%*
+let inputTitle = await tp.system.prompt("제목 입력")
+let date = tp.date.now("YYYY-MM-DD")
+let datetime = tp.date.now("YYYY-MM-DD HH:mm:ss Z")
+
+await tp.file.rename(`${date}-${inputTitle.replaceAll(" ", "-")}`)
+-%>
 ---
-title: 없음
-date: 2026-04-12 22:00:00 +0900
+title: "<% inputTitle %>"
+date: <% datetime %>
 categories: 없음
 tags:
 toc: false
 description:
 comments: false
+pin: true
 ---
+
 # 대제목
 
 ## 소제목
@@ -16,5 +25,3 @@ comments: false
 ## 📥 다운로드
 
 <!-- [파일 다운로드](/assets/files/파일이름) -->
-
----
