@@ -15,8 +15,6 @@
     <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
   </header>
 
-  <!-- .profile-wrapper -->
-
   <nav class="flex-column flex-grow-1 w-100 ps-0">
     <ul class="nav">
 
@@ -28,9 +26,9 @@
         </a>
       </li>
 
-      <!-- the real tabs -->
+      <!-- tabs -->
       {% for tab in site.tabs %}
-        {% if tab.url != '/tags/' %}
+        {% if tab.url != '/tags/' and tab.url != '/archives/' %}
 
         <li class="nav-item{% if tab.url == page.url %} active{% endif %}">
           <a href="{{ tab.url | relative_url }}" class="nav-link">
@@ -111,7 +109,4 @@
     {% endfor %}
   </div>
 
-  <!-- .sidebar-bottom -->
 </aside>
-
-<!-- #sidebar -->
