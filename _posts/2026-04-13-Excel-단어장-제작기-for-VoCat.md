@@ -1,5 +1,5 @@
 ---
-title: Excel 단어장 제작기 for VoCat
+title: VoCat용 단어장 제작기
 date: 2026-04-13 01:06:59 +09:00
 categories: Excel
 tags:
@@ -10,8 +10,6 @@ description: VoCat용 단어장 제작기입니다.
 comments: false
 pin: false
 ---
-# VoCat용 단어장 제작기
-
 ## 소개 및 동기
 (해당 어플을 알게된 관련 포스팅은 나중에 작성하도록 하겠습니다.)
 단어를 하나하나 손수 입력하던 도중 단어장의 모든 단어들이 Excel 형태나 PDF 형태로 존재하는것을 확인하고 업로드를 직접하고싶어 VoCat을 열었습니다만... VoCat은 형식이 갖춰진 상태로만 업로드가 되더군요.
@@ -20,5 +18,4 @@ pin: false
 ## 사용법
 간단하게 엑셀에 추가기능으로 추가하시면 언제든 사용가능합니다.
 제작하기 버튼을 누르시면 몇개를 묶을건지 나오고 해당 파일이 위치한 경로에 생성됩니다.
-## 📥 다운로드
-[단어장제작기.xlam](/assets/files/excel/단어장제작기.xlam)
+## 📥 [다운로드](/assets/files/excel/단어장제작기.xlam)
