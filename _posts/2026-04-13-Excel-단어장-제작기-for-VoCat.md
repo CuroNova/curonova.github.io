@@ -5,7 +5,6 @@ categories: Excel
 tags:
   - Excel
   - Tool
-toc: true
 description: VoCat용 단어장 제작기입니다.
 comments: false
 pin: false
