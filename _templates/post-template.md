@@ -5,6 +5,8 @@ title: ""
 date: <% tp.date.now("YYYY-MM-DD HH:mm:ss") %> +0900
 categories: [없음]
 tags: [없음]
+icon: 📁
+
 ---
 
 # {{title}}
