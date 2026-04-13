@@ -42,7 +42,12 @@ layout: page
           <i class="far fa-folder{% if sub_categories_size > 0 %}-open{% endif %} fa-fw"></i>
 
           {% capture _category_url %}/categories/{{ category_name | slugify | url_encode }}/{% endcapture %}
-          <a href="{{ _category_url | relative_url }}" class="mx-2">{{ category_name }}</a>
+
+          {% assign category_display = site.data.category_names[category_name] %}
+
+          <a href="{{ _category_url | relative_url }}" class="mx-2">
+            {{ category_display | default: category_name }}
+          </a>
 
           <!-- content count -->
           {% assign top_posts_size = site.categories[category_name] | size %}
@@ -107,7 +112,12 @@ layout: page
                 <i class="far fa-folder fa-fw"></i>
 
                 {% capture _sub_ctg_url %}/categories/{{ sub_category | slugify | url_encode }}/{% endcapture %}
-                <a href="{{ _sub_ctg_url | relative_url }}" class="mx-2">{{ sub_category }}</a>
+
+                {% assign sub_display = site.data.category_names[sub_category] %}
+
+                <a href="{{ _sub_ctg_url | relative_url }}" class="mx-2">
+                  {{ sub_display | default: sub_category }}
+                </a>
 
                 {% assign posts_size = site.categories[sub_category] | size %}
                 <span class="text-muted small font-weight-light">
@@ -131,7 +141,6 @@ layout: page
         </div>
       {% endif %}
     </div>
-    <!-- .card -->
 
     {% assign group_index = group_index | plus: 1 %}
   {% endif %}
