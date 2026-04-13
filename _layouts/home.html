@@ -5,7 +5,7 @@ layout: default
 {% include lang.html %}
 
 {% assign posts = site.posts
-  | where_exp: 'item', 'item.hidden != true and item.categories and item.categories contains "notice"'
+  | where_exp: 'item', 'item.hidden != true and item.categories and item.categories contains "Notice"'
   | sort: 'date'
   | reverse
 %}
