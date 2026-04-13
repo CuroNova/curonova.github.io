@@ -1,10 +1,9 @@
 ---
 title: VoCat용 단어장 제작기
 date: 2026-04-13 01:06:59 +09:00
-categories: Excel
+categories: excel
 tags:
   - Excel
-  - Tool
 toc: true
 description: VoCat용 단어장 제작기입니다.
 comments: false
