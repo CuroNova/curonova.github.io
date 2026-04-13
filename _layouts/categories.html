@@ -10,18 +10,11 @@ layout: page
 
 {% assign group_index = 0 %}
 
-{# ========================= #}
-{# 1. 카테고리 우선순위 정의 #}
-{# ========================= #}
 {% assign category_order = "notice,dev,game,life,tool,excel" | split: "," %}
 
-{# ========================= #}
-{# 2. 우선순위 + 나머지 합치기 #}
-{# ========================= #}
 {% assign sort_categories = "" | split: "" %}
 {% assign used_categories = "" | split: "" %}
 
-{%- comment -%} 1) 우선순위 먼저 {%- endcomment -%}
 {% for cat_name in category_order %}
   {% for category in site.categories %}
     {% assign name = category | first | downcase | strip %}
@@ -33,7 +26,6 @@ layout: page
   {% endfor %}
 {% endfor %}
 
-{%- comment -%} 2) 나머지 자동 추가 {%- endcomment -%}
 {% for category in site.categories %}
   {% assign name = category | first | downcase | strip %}
 
@@ -41,12 +33,6 @@ layout: page
     {% assign sort_categories = sort_categories | push: category %}
   {% endunless %}
 {% endfor %}
-
-{% assign sort_categories = sort_categories | sort %}
-
-{# ========================= #}
-{# 3. 출력 루프 시작 #}
-{# ========================= #}
 
 {% for category in sort_categories %}
   {% assign category_name = category | first %}
@@ -69,7 +55,6 @@ layout: page
     {% assign sub_categories_size = sub_categories | size %}
 
     <div class="card categories">
-      <!-- top-category -->
       <div
         id="{{ HEAD_PREFIX }}{{ group_index }}"
         class="card-header d-flex justify-content-between hide-border-bottom"
@@ -86,7 +71,6 @@ layout: page
             {{ category_display | default: category_name }}
           </a>
 
-          <!-- content count -->
           {% assign top_posts_size = site.categories[category_name] | size %}
           <span class="text-muted small font-weight-light">
             {% if sub_categories_size > 0 %}
@@ -121,7 +105,6 @@ layout: page
           </span>
         </span>
 
-        <!-- arrow -->
         {% if sub_categories_size > 0 %}
           <a
             href="#{{ LIST_PREFIX }}{{ group_index }}"
@@ -133,15 +116,14 @@ layout: page
             <i class="fas fa-fw fa-angle-down"></i>
           </a>
         {% else %}
-          <span data-bs-toggle="collapse" class="category-trigger hide-border-bottom disabled">
+          <span class="category-trigger hide-border-bottom disabled">
             <i class="fas fa-fw fa-angle-right"></i>
           </span>
         {% endif %}
       </div>
 
-      <!-- Sub-categories -->
       {% if sub_categories_size > 0 %}
-        <div id="{{ LIST_PREFIX }}{{ group_index }}" class="collapse show" aria-expanded="true">
+        <div id="{{ LIST_PREFIX }}{{ group_index }}" class="collapse show">
           <ul class="list-group">
             {% for sub_category in sub_categories %}
               <li class="list-group-item">
@@ -159,18 +141,6 @@ layout: page
                 {% assign posts_size = site.categories[sub_category] | size %}
                 <span class="text-muted small font-weight-light">
                   {{ posts_size }}
-
-                  {% if posts_size > 1 %}
-                    {{
-                      site.data.locales[lang].categories.post_measure.plural
-                      | default: site.data.locales[lang].categories.post_measure
-                    }}
-                  {% else %}
-                    {{
-                      site.data.locales[lang].categories.post_measure.singular
-                      | default: site.data.locales[lang].categories.post_measure
-                    }}
-                  {% endif %}
                 </span>
               </li>
             {% endfor %}
